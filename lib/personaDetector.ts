@@ -42,8 +42,11 @@ class PersonaDetector {
       this.model = model;
       this.initialized = true;
       
-      // Pre-train with synthetic data
-      await this.trainWithSyntheticData();
+      // Pre-train with synthetic data in background using setTimeout
+      // to avoid blocking the main UI thread
+      setTimeout(async () => {
+        await this.trainWithSyntheticData();
+      }, 0);
       
     } catch (error) {
       console.error('Failed to initialize persona detector:', error);
@@ -148,7 +151,7 @@ class PersonaDetector {
     const ys = tf.tensor2d(labels);
 
     await this.model.fit(xs, ys, {
-      epochs: 50,
+      epochs: 15, // Reduced for faster initialization
       batchSize: 32,
       shuffle: true,
       verbose: 0,
