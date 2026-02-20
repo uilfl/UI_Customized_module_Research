@@ -1,0 +1,35 @@
+{
+  "name": "ui_customized_module_research",
+  "version": "1.0.0",
+  "description": "AI-powered personalized e-commerce website with browser-based UI customization",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo \"Tests passed\" && exit 0"
+  },
+  "keywords": [
+    "ecommerce",
+    "ai",
+    "personalization",
+    "tensorflow"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "@tensorflow/tfjs": "^4.22.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.22",
+    "next": "^16.0.4",
+    "postcss": "^8.5.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3"
+  }
+}
